@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const firebaseConfig = {
@@ -12,10 +12,11 @@ const firebaseConfig = {
   appId: "1:193400572322:web:5a8e9d48af6084d8988afb"
 };
 
+
 const app = initializeApp(firebaseConfig);
 
 initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider("6Le_pqIpAAAAALpYBYfD7WLro147eAumO4QCGZEY"),
+    provider: new ReCaptchaEnterpriseProvider("6Le_pqIpAAAAALpYBYfD7WLro147eAumO4QCGZEY"),
     isTokenAutoRefreshEnabled: false
 });
 
