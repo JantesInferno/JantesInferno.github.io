@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 
 initializeAppCheck(app, {
     provider: new ReCaptchaV3Provider("6Le_pqIpAAAAALpYBYfD7WLro147eAumO4QCGZEY"),
-    isTokenAutoRefreshEnabled: true
+    isTokenAutoRefreshEnabled: false
 });
 
 const fbFunctions = getFunctions(app);
