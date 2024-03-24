@@ -5,8 +5,7 @@
     "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "webpack --mode=production",
-    "predeploy": "npm run build"
+    "build": "webpack --mode=production"
   },
   "dependencies": {
     "firebase": "^10.9.0"
