@@ -3,21 +3,7 @@ import { initializeApp } from "firebase/app";
 import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDR6kVxA0VlKaMTZ_yGUinpkx9UHoK7IFA",
-    authDomain: "portfolio-chatbot-f67ad.firebaseapp.com",
-    projectId: "portfolio-chatbot-f67ad",
-    storageBucket: "portfolio-chatbot-f67ad.appspot.com",
-    messagingSenderId: "193400572322",
-    appId: "1:193400572322:web:5a8e9d48af6084d8988afb"
-};
 
-const app = initializeApp(firebaseConfig);
-/*
-initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider("6LfbX6MpAAAAAFBrnTGjQwMOSisBmkkLbly2ZvaG"),
-    isTokenAutoRefreshEnabled: false
-});*/
 
 const fbFunctions = getFunctions(app);
 
