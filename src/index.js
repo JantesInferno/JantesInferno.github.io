@@ -13,11 +13,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
+/*
 initializeAppCheck(app, {
     provider: new ReCaptchaV3Provider("6LfbX6MpAAAAAFBrnTGjQwMOSisBmkkLbly2ZvaG"),
     isTokenAutoRefreshEnabled: false
-});
+});*/
 
 const fbFunctions = getFunctions(app);
 
