@@ -4,7 +4,7 @@ import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyADvNgBAgpg99Hf8y1-CQGBIg19tdeR1Go",
+    apiKey: "AIzaSyBVf6nwqJg0js9bHzj0hyc3C_hVFJ2-b1Q",
     authDomain: "portfolio-chatbot-f67ad.firebaseapp.com",
     projectId: "portfolio-chatbot-f67ad",
     storageBucket: "portfolio-chatbot-f67ad.appspot.com",
