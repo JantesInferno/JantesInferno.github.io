@@ -19,7 +19,7 @@ initializeAppCheck(app, {
     isTokenAutoRefreshEnabled: false
 });
 
-const fbFunctions = getFunctions(app, 'europe-north1');
+const fbFunctions = getFunctions(app);
 
 const textarea = document.querySelector('.chatbox-message-input');
 const chatboxForm = document.querySelector('.chatbox-message-form');
