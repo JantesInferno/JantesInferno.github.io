@@ -140,23 +140,9 @@ function displayMessage(response) {
         existingLoadingMessage.remove();
     }
 
-    let messageContent;
-    if (response.code === 200) {
-        const content = response.message.text.value;
-        if (response.message.text.annotations[0]) {
-            const replaceString = response.message.text.annotations[0].text;
-            messageContent = content.replace(replaceString, '');
-        }
-        else {
-            messageContent = content;
-        }
-    } else {
-        messageContent = response.message;
-    }
-
     let messageEl = `
         <div class="chatbox-message-item received">
-        <span class="chatbox-message-item-text">${messageContent}</span>
+        <span class="chatbox-message-item-text">${response.message}</span>
         <span class="chatbox-message-item-time bot">Chatterbot</span>
         </div>
     `;
