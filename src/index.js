@@ -53,8 +53,7 @@ async function sendMessage(e) {
 }
 
 async function getMessage(question) {
-    const message = httpsCallable(getFunctions(app, 'europe-north1'), 'getChatResponse', 
-    { limitedUseAppCheckTokens: true });
+    const message = httpsCallable(getFunctions(app, 'europe-north1'), 'getChatResponse');
     message({ question })
     .then((result) => {
         var response = result.data;
