@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-check";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const firebaseConfig = {
@@ -54,7 +54,7 @@ async function sendMessage(e) {
 
 async function getMessage(question) {
     
-    const message = httpsCallable(getFunctions(), 'getChatResponse');
+    const message = httpsCallable(getFunctions(), 'testMessageResponse');
     message({ question })
     .then((result) => {
         var response = result.data;
