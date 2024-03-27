@@ -54,7 +54,8 @@ async function sendMessage(e) {
 
 async function getMessage(question) {
     console.log("test");
-    const message = httpsCallable(getFunctions(), 'getChatResponse');
+    const message = httpsCallable(getFunctions(), 'getChatResponse', 
+    { limitedUseAppCheckTokens: true });
     message({ question })
     .then((result) => {
         var response = result.data;
