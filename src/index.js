@@ -4,18 +4,18 @@ import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "firebase/app-ch
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAD2GHVgKkwVKaGz62oa4JYukIESkT4u4",
-  authDomain: "testappcheck-43533.firebaseapp.com",
-  projectId: "testappcheck",
-  storageBucket: "testappcheck.appspot.com",
-  messagingSenderId: "799726486162",
-  appId: "1:799726486162:web:9171545233afcef6301c4b"
-};
+    apiKey: "AIzaSyDR6kVxA0VlKaMTZ_yGUinpkx9UHoK7IFA",
+    authDomain: "portfolio-chatbot-f67ad.firebaseapp.com",
+    projectId: "portfolio-chatbot-f67ad",
+    storageBucket: "portfolio-chatbot-f67ad.appspot.com",
+    messagingSenderId: "193400572322",
+    appId: "1:193400572322:web:5a8e9d48af6084d8988afb"
+  };
 
 const app = initializeApp(firebaseConfig);
 
 const appCheck = initializeAppCheck(app, {
-    provider: new ReCaptchaEnterpriseProvider("6LcSOqYpAAAAALxGxXPcCVwRv_-UT9R9iO7RaWP2"),
+    provider: new ReCaptchaEnterpriseProvider("6LevkKYpAAAAAGMblsqXgSluR6vvLDTJGm31F44g"),
     isTokenAutoRefreshEnabled: true 
   });
 
@@ -54,7 +54,7 @@ async function sendMessage(e) {
 
 async function getMessage(question) {
     console.log("test");
-    const message = httpsCallable(getFunctions(), 'testMessageResponse');
+    const message = httpsCallable(getFunctions(), 'getChatResponse');
     message({ question })
     .then((result) => {
         var response = result.data;
