@@ -19,8 +19,6 @@ const appCheck = initializeAppCheck(app, {
     isTokenAutoRefreshEnabled: true 
   });
 
-const fbFunctions = getFunctions(app, 'europe-north1');
-
 const textarea = document.querySelector('.chatbox-message-input');
 const chatboxForm = document.querySelector('.chatbox-message-form');
 const chatboxMessageWrapper = document.querySelector('.chatbox-message-content');
@@ -56,7 +54,7 @@ async function sendMessage(e) {
 
 async function getMessage(question) {
     
-    const message = httpsCallable(fbFunctions, 'getChatResponse');
+    const message = httpsCallable(getFunctions(), 'getChatResponse');
     message({ question })
     .then((result) => {
         var response = result.data;
