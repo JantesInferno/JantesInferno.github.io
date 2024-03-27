@@ -53,7 +53,6 @@ async function sendMessage(e) {
 }
 
 async function getMessage(question) {
-    console.log("test");
     const message = httpsCallable(getFunctions(), 'getChatResponse', 
     { limitedUseAppCheckTokens: true });
     message({ question })
