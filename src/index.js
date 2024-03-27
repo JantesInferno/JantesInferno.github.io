@@ -140,6 +140,8 @@ function displayMessage(response) {
         existingLoadingMessage.remove();
     }
 
+    console.log(response);
+    console.log(response.message);
     let messageEl = `
         <div class="chatbox-message-item received">
         <span class="chatbox-message-item-text">${response.message}</span>
