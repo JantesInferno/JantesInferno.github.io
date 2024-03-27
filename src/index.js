@@ -4,20 +4,20 @@ import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyADvNgBAgpg99Hf8y1-CQGBIg19tdeR1Go",
-    authDomain: "portfolio-chatbot-f67ad.firebaseapp.com",
-    projectId: "portfolio-chatbot-f67ad",
-    storageBucket: "portfolio-chatbot-f67ad.appspot.com",
-    messagingSenderId: "193400572322",
-    appId: "1:193400572322:web:5a8e9d48af6084d8988afb"
+  apiKey: "AIzaSyCAD2GHVgKkwVKaGz62oa4JYukIESkT4u4",
+  authDomain: "testappcheck-43533.firebaseapp.com",
+  projectId: "testappcheck",
+  storageBucket: "testappcheck.appspot.com",
+  messagingSenderId: "799726486162",
+  appId: "1:799726486162:web:9171545233afcef6301c4b"
 };
 
 const app = initializeApp(firebaseConfig);
 
-initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider("6LfbX6MpAAAAAFBrnTGjQwMOSisBmkkLbly2ZvaG"),
-    isTokenAutoRefreshEnabled: false
-});
+const appCheck = initializeAppCheck(app, {
+    provider: new ReCaptchaEnterpriseProvider("6LcSOqYpAAAAALxGxXPcCVwRv_-UT9R9iO7RaWP2"),
+    isTokenAutoRefreshEnabled: true 
+  });
 
 const fbFunctions = getFunctions(app, 'europe-north1');
 
