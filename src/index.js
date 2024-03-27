@@ -53,7 +53,7 @@ async function sendMessage(e) {
 }
 
 async function getMessage(question) {
-    
+    console.log("test");
     const message = httpsCallable(getFunctions(), 'testMessageResponse');
     message({ question })
     .then((result) => {
