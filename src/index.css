@@ -232,11 +232,13 @@ body {
   border-radius: 5px;
   background-size: cover !important;
   background-repeat: no-repeat !important;
+  border: 1px solid white;
 }
 
 #profile div {
   font-weight: bold;
   margin: 1.5vh 0px;
+  border-radius: 50%;
 }
 
 #username {
