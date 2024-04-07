@@ -297,6 +297,9 @@ body {
   /* align section w/ heading above */
 }
 
+.live-demo {
+  border: 2px solid linear-gradient(180deg, rgba(26,109,255,1) 0%, rgba(200,34,255,1) 100%);
+}
 .projects a {
   /* 30px is the gutter size in magic grid */
   width: calc(49% - 30px);
