@@ -22,6 +22,7 @@ const appCheck = initializeAppCheck(app, {
 const textarea = document.querySelector('.chatbox-message-input');
 const chatboxForm = document.querySelector('.chatbox-message-form');
 const chatboxMessageWrapper = document.querySelector('.chatbox-message-content');
+let botIsTyping = false;
 
 textarea.addEventListener('input', adjustTextarea);
 
@@ -53,6 +54,7 @@ async function sendMessage(e) {
 }
 
 async function getMessage(question) {
+    botIsTyping = true;
     const message = httpsCallable(getFunctions(app, 'europe-north1'), 'getChatResponse');
     message({ question })
     .then((result) => {
@@ -65,6 +67,7 @@ async function getMessage(question) {
 }
 
 function writeMessage(messageContent) {
+    if (botIsTyping) return;
     const today = new Date();
     const messageTime = `${addZero(today.getHours())}:${addZero(today.getMinutes())}`;
     
@@ -158,4 +161,5 @@ function displayMessage(response) {
 
     chatboxMessageWrapper.insertAdjacentHTML('beforeend', messageEl);
     scrollBottom();
+    botIsTyping = false;
 }
