@@ -45,11 +45,14 @@ chatboxForm.addEventListener('submit', sendMessage);
 
 async function sendMessage(e) {
     e.preventDefault();
-    const question = textarea.value.trim().replace(/\n/g, '');
+    
+    if (!botIsTyping) {
+        const question = textarea.value.trim().replace(/\n/g, '');
 
-    if (isValid(question)) {
-        writeMessage(question);
-        await getMessage(question);
+        if (isValid(question)) {
+            writeMessage(question);
+            await getMessage(question);
+        }
     }
 }
 
@@ -67,7 +70,6 @@ async function getMessage(question) {
 }
 
 function writeMessage(messageContent) {
-    if (botIsTyping) return;
     const today = new Date();
     const messageTime = `${addZero(today.getHours())}:${addZero(today.getMinutes())}`;
     
